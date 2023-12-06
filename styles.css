@@ -124,36 +124,6 @@ transform: rotateZ(0);
     }
 }
 
-/**botoes**/
-.btnLastFm{
-    background-color: white;
-    border-color: #d51007;
-    color: #d51007;
-}
-
-.btnLastFm_a{
-  color: #d51007;
-  text-decoration: none;
-}
-
-
-.btnLastFm:hover{
-    background-color: #d51007;
-    border-color: #d51007;
-    color: white;
-}
-
-.btnGithub{
-  background-color: white;
-  border-color: black;
-  color: black;
-}
-.btnGithub:hover{
-  background-color: black;
-  border-color: black;
-  color: white;
-}
-
 #euSouUm{
   color: black;
   text-decoration:underline;
