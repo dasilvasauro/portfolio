@@ -44,12 +44,24 @@
                   $('.nav-link').on('click', function() {
                     $('.navbar-collapse').collapse('hide');
                   });
-
                 })
             });
 
             aLinks.forEach(function (link){
                 link.addEventListener('click', navigate);
+            });
+
+            $(document).ready(function() {
+              $(document).click(function(event) {
+                // Check if the clicked element is not within the navbar
+                if (!$(event.target).closest('.navbar').length) {
+                  // Check if the navbar is currently open
+                  if ($('.navbar-collapse').hasClass('show')) {
+                    // Close the navbar
+                    $('.navbar-toggler').click();
+                  }
+                }
+              });
             });
 
             showPage('home');
