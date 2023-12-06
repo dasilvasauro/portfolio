@@ -28,6 +28,7 @@
                 event.preventDefault();
                 const pageId = this.getAttribute('href').substring(1);
                 showPage(pageId);
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
             }
 
             navLinks.forEach(function (link){
