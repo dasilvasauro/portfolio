@@ -86,7 +86,8 @@
                  'modal_close':'Fechar',
                  'backtotop':'Voltar ao topo',
                  'aboutme_title':'Me chamo Bruno e sou um',
-                 'ts_aboutme':'Como UX designer meu objetivo é criar experiências acessíveis e bem definidas, desde o processo de ideação. Em minha experiência como Freelance, tenho a opotunidade de trbalhar próximo ao desenvolvimento, podendo assim otimizar e agilizar meu processo de Design.',
+                 'ts_aboutme':'Trabalho como UX Designer Freelance na Coders Club e como Assistente de Sistemas no Hotel Pullman São Paulo GRU Airport. Já trabalhei com Desenvolvimento Fullstack na Signa Consultoria. Com essa experiência, tenho bagagem nos segmentos de infraestrutura, desenvolvimento e design.',
+                 'ts_aboutmep2':'Gosto de refinar meus trabalhos, tanto na parte de UX realizando pesquisa e testes de usabilidade, quanto na parte de UI, procurando manter um padrão elegante de minimalismo.',
                  'viewCV':'Visualizar Currículo',
                  'viewCVENG':'Visualizar Currículo em Inglês',
                  'lastfm_title':'Last.fm - Redesign App Mobile',
@@ -118,6 +119,7 @@
                  'backtotop':'Back to top',
                  'aboutme_title':'My name is Bruno and I am an',
                  'ts_aboutme':'As a UX designer, my goal is to create accessible and well-defined experiences, starting from the ideation process. In my experience as a freelancer, I have the opportunity to work closely with development, which allows me to optimize and streamline my design process.',
+                 'ts_aboutmep2':'I like to refine my work, UX-wise when it comes to research and usability, and UI-wise, crafting beautiful experiences with digital products',
                  'viewCV':'View Resume',
                  'viewCVENG':'View Resume in English',
                  'lastfm_title':'Last.fm - Mobile App Redesign',
@@ -455,54 +457,68 @@
                 </div>
               </div>
             <!--HERO PRINCIPAL-->
-    
-            <div class="px-4 py-5 text-center">
-                <h1 class="mb-5" data-translate="home_recents">Projetos mais recentes</h1>
-            </div>
-            <div class="row row-cols-1 row-cols-md-2 g-4 px-5">
-              <div class="col">
-                <div class="card border-dark border-radius-0">
-                  <img src="images/Capa_Pina.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title" data-translate="pina_title">App Pinacoteca São Paulo</h5>
-                    <p class="card-text" data-translate="pina_about">Projeto de aplicativo para o famoso museu de São Paulo</p>
-                    <br>
-                    <button class="btn btn-dark my-2">
-                      <a style="color: white;text-decoration: none;" href="https://www.behance.net/gallery/200180661/App-Pinacoteca-Sao-Paulo" data-translate="btn_viewbehance">Visualizar no Behance</a>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"/>
-                        <path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"/>
-                      </svg>               
-                    </button>              
-                  </div>                   
+            <div class="container px-5 .col-12">                          
+              <div class="container"></div>           
+              <div class="row">                       
+                <div id="lastFM" class="carousel slide carousel-fade col-sm-6 mb-3" data-bs-ride="carousel">
+                  <div class="carousel-inner" >       
+                    <div class="carousel-item active">
+                      <img src="images/Last.fm Cover.png" class="d-block w-100" alt="...">
+                    </div>                            
+                    <div class="carousel-item">       
+                      <img src="images/Last.fm 2.png" class="d-block w-100" alt="...">
+                    </div>                            
+                  </div>                              
+                  <div class="card" style="border-radius: 0 0 8px 8px!important;">
+                    <div class="card-header" style="font-weight: 70;">
+                      <span class="badge text-bg-secondary px-2">Figma</span>
+                      <span class="badge text-bg-secondary px-2">UX Research</span>
+                      <span class="badge text-bg-secondary px-2">UI Design</span>     
+                    </div>                            
+                    <div class="card-body">           
+                      <h5 class="card-title" data-translate="lastfm_title">Last.fm - Redesign App Mobile</h5>
+                      <p class="card-text" data-translate="lastfm_about">Minha concepção de uma versão ideal para um aplicativo esquecido de uma plataforma presente na cultura musical.</p>
+                      <button class="btn btn-danger my-2" style="margin-right: 10px;">
+                        <a href="https://www.behance.net/gallery/171218655/Lastfm-Mobile-App-Redesign" style="color: white;text-decoration: none;" data-translate="btn_viewbehance">Visualizar no Behance</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"/>
+                          <path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"/>
+                        </svg>  
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="card border-dark">
-                  <img src="images/Last.fm Cover.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title" data-translate="lastfm_title">Last.fm: Redesign de App Mobile</h5>
-                    <p class="card-text" data-translate="lastfm_about">Minha concepção de uma versão ideal para um aplicativo esquecido de uma plataforma presente na cultura musical.</p>
-                    <button class="btn btn-danger my-2">
-                      <a style="color: white;text-decoration: none;" href="https://www.behance.net/gallery/171218655/Lastfm-Mobile-App-Redesign" data-translate="btn_viewbehance">Visualizar no Behance</a>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"/>
-                        <path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"/>
-                      </svg>               
-                    </button>              
-                  </div>                   
+  
+                <div id="projetoPina" class="carousel slide carousel-fade col-sm-6 mb-3" data-bs-ride="carousel">
+                  <div class="carousel-inner" >
+                    <div class="carousel-item active">
+                      <img src="images/Capa_Pina.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item active">
+                      <img src="images/Refinando o Design.png" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <div class="card" style="border-radius: 0 0 8px 8px!important;">
+                    <div class="card-header">
+                      <span class="badge text-bg-secondary px-2">Figma</span>
+                      <span class="badge text-bg-secondary px-2">UX</span>
+                      <span class="badge text-bg-secondary px-2">UI Design</span>     
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title" data-translate="pina_title">App Pinacoteca São Paulo</h5>
+                      <p class="card-text" data-translate="pina_about">Projeto de aplicativo para o famoso museu de São Paulo</p>
+                      <br>
+                      <button class="btn btn-dark my-2">
+                        <a href="https://www.behance.net/gallery/200180661/App-Pinacoteca-Sao-Paulo" style="color: white;text-decoration: none;" data-translate="btn_viewbehance">Visualizar no Behance</a>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"/>
+                            <path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"/>
+                          </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>    
-                                                    
-                <!--<div class="card mx-3 px-2">                                             
-                  <img src="..." class="card-img-top" alt="...">                             
-                  <div class="card-body">                                                    
-                    <h5 class="card-title">Card title</h5>                                   
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                  </div>                                                                     
-                </div>-->                                                                    
-            </div>                                                                           
+              </div>                                                                         
             <div class="container col-sm-8 my-3 text-center">                                     
                 <a class="icon-link navigators" href="#projetos" data-translate="home_viewprojects">
                     Ver todos os projetos                                                    
@@ -636,7 +652,10 @@
                   </div>
                   <br>
                   <br>
-                  <p class="text-start fs-5 mb-3" data-translate="ts_aboutme">Como UX designer meu objetivo é criar experiências acessíveis e bem definidas, desde o processo de ideação. Em minha experiência como Freelance, tenho a opotunidade de trbalhar próximo ao desenvolvimento, podendo assim otimizar e agilizar meu processo de Design. </p>
+                  <div class="container px-3">
+                    <p class="text-start fs-5 " data-translate="ts_aboutme">Trabalho como UX Designer Freelance na Coders Club e como Assistente de Sistemas no Hotel Pullman São Paulo GRU Airport. Já trabalhei com Desenvolvimento Fullstack na Signa Consultoria. Com essa experiência, tenho bagagem nos segmentos de infraestrutura, desenvolvimento e design.</p>
+                    <p class="text-start fs-5 mb-3" data-translate="ts_aboutmep2">Gosto de refinar meus trabalhos, tanto na parte de UX realizando pesquisa e testes de usabilidade, quanto na parte de UI, procurando manter um padrão elegante de minimalismo.</p>
+                  </div>
                   
                   <div class="py-3">
                     <h4 data-translate="baixaCV">
