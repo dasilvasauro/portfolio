@@ -1,5 +1,9 @@
 *{
-    font-family: "Quicksand", sans-serif;
+    font-family: "Share Tech", sans-serif;
+}
+
+.navbar-toggler{
+  border: none;
 }
 
 .nav-custom{
@@ -8,7 +12,7 @@
 }
 
 .rounded-cardz{
-    border-radius: 15px;
+    border-radius: 0px;
 }
 
 section {
@@ -16,8 +20,8 @@ section {
     animation: fadeIn 1s ease-in-out forwards;
 }
 
-.huve:hover,.nav-link:hover{
-    color: rgb(30, 120, 255);
+.huve,.nav-link:hover{
+    color: rgb(0, 0, 0);
     /*animation: fadeOut 1s ease-in-out forwards;*/
 }
 
@@ -25,50 +29,16 @@ section {
   cursor: pointer;
 }
 
-#translate-ptBR:hover{
-  box-shadow: 0px 0px 52px 0px #53a81a;
-}
-
-#translate-en:hover{
-  box-shadow: 0px 0px 52px 0px #3d68e6;
-}
-
 #hero-btn1{
   background-color: white;
-  border-color: blue;
-  color: blue;
-  opacity: 0.6;
-  transition: 0.6s;
+  border-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 #hero-btn1:hover{
-  opacity: 1;
+  background-color: black;
+  border-color: black;
   color: white;
-  background: linear-gradient(270deg, #0084ff, #828ff5);
-  background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
-}
-
-#hero-btn2{
-  background-color: white;
-  border-color: rgb(51, 131, 89);
-  color: rgb(51, 131, 89);
-  opacity: 0.6;
-  transition: 0.6s;
-}
-
-#hero-btn2:hover{
-  opacity: 1;
-  color: white;
-  background: linear-gradient(270deg, #49b28f, #9cd59f);
-  background-size: 400% 400%;
-      
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
 }
 
 @keyframes wiggle {
@@ -136,8 +106,8 @@ transform: rotateZ(0);
 }
 
 #modal-btn-linkedin{
-  color: #0077b5;
-  border-color: #0077b5;
+  color: #000000;
+  border-color: #000000;
 }
 
 #modal-btn-linkedin:hover{
@@ -147,8 +117,8 @@ transform: rotateZ(0);
 }
 
 #modal-btn-behance{
-  color: #053eff;
-  border-color: #053eff;
+  color: #000000;
+  border-color: #000000;
 }
 
 #modal-btn-behance:hover{
@@ -158,8 +128,8 @@ transform: rotateZ(0);
 }
 
 #modal-btn-whatsapp{
-  color: #128C7E;
-  border-color: #128C7E;
+  color: #000000;
+  border-color: #000000;
 }
 
 #modal-btn-whatsapp:hover{
@@ -169,12 +139,12 @@ transform: rotateZ(0);
 }
 
 .nav-link.active:not(#talktome_link) {
-  color: #007BFF!important;
+  color: #000000!important;
   font-weight: 400;
 }
 
 #talktome_link:hover{
   cursor: pointer;
-  color: orangered!important;
+  color: rgb(203, 0, 54)!important;
   font-weight: 400;
 }

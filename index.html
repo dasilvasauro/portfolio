@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bruno Santos</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/logo1.svg">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b18d33d447.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
@@ -79,7 +81,7 @@
                  'hero_btn_sobremim':'Me conheça melhor',
                  'btn_viewbehance':'Visualizar no Behance',
                  'btn_viewgithub':'Ver no Github',
-                 'home_recents':'Projetos mais recentes 👇🏽',
+                 'home_recents':'Projetos mais recentes',
                  'home_viewprojects':'Ver todos os projetos',
                  'modal_close':'Fechar',
                  'backtotop':'Voltar ao topo',
@@ -94,7 +96,10 @@
                  'pina_title':'App Pinacoteca São Paulo',
                  'pina_about':'Projeto de aplicativo para o famoso museu de São Paulo.',
                  'cssTypewriter':'Em breve haverão mais coisas por aqui, prometo!',
-                 'inprogress':'Em Progresso'
+                 'inprogress':'Em Progresso',
+                 'cvPortugues':'Português',
+                 'cvIngles':'Inglês',
+                 'baixaCV':'Baixar meu Currículo'
                },
                'en':{
                  'goback':'Go back',
@@ -107,7 +112,7 @@
                  'hero_btn_sobremim':'Know me better',
                  'btn_viewbehance':'View on Behance',
                  'btn_viewgithub':'View on Github',
-                 'home_recents':'Most recent projects 👇🏽',
+                 'home_recents':'Most recent projects',
                  'home_viewprojects':'View all projects',
                  'modal_close':'Close',
                  'backtotop':'Back to top',
@@ -122,9 +127,13 @@
                  'pina_title':'Pinacoteca App',
                  'pina_about':'App project for the famous São Paulo museum.',
                  'cssTypewriter':'Soon there will be more stuff around here, I promise!',
-                 'inprogress':'In Progress'
+                 'inprogress':'In Progress',
+                 'cvPortugues':'Portuguese',
+                 'cvIngles':'English',
+                 'baixaCV':'Download my Resume'
                }
               };
+
               
               //idioma padrão
               let currentLanguage = 'pt-BR';
@@ -430,13 +439,13 @@
             <div class="container col-xxl-8 px-5 py-5">
                 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                   <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="images/hero_picture.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                    <img src="images/meu_motion.gif" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                   </div>
                   <div class="col-lg-6">
                     <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" data-translate="hero_titulo">Olá, bem-vindo ao meu portfólio</h1>
                     <p class="lead" data-translate="hero_texto">Sou um Designer UX/UI focado em entregar experiências acessíveis e polidas para os mais diversos perfis de usuários. Acredito que um bom design transforma o dia-a-dia das pessoas.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                      <button href="#sobremim" type="button" class="btn btn-primary btn-lg px-4 me-md-2 navigators" data-translate="hero_btn_sobremim" id="hero-btn1">Me conheça melhor
+                      <button href="#sobremim" type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-translate="hero_btn_sobremim" id="hero-btn1">Me conheça melhor
                         <!---<a href="#sobremim" class="btn btn-primary btn-lg px-4 me-md-2 navigators">
                           sobre mim
                         </a>-->
@@ -448,10 +457,28 @@
             <!--HERO PRINCIPAL-->
     
             <div class="px-4 py-5 text-center">
-                <h1 class="mb-5" data-translate="home_recents">Projetos mais recentes 👇🏽</h1>
+                <h1 class="mb-5" data-translate="home_recents">Projetos mais recentes</h1>
             </div>
-            <div class="card-group px-5 mb-4">
-                <div class="card mx-2">
+            <div class="row row-cols-1 row-cols-md-2 g-4 px-5">
+              <div class="col">
+                <div class="card border-dark border-radius-0">
+                  <img src="images/Capa_Pina.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" data-translate="pina_title">App Pinacoteca São Paulo</h5>
+                    <p class="card-text" data-translate="pina_about">Projeto de aplicativo para o famoso museu de São Paulo</p>
+                    <br>
+                    <button class="btn btn-dark my-2">
+                      <a style="color: white;text-decoration: none;" href="https://www.behance.net/gallery/200180661/App-Pinacoteca-Sao-Paulo" data-translate="btn_viewbehance">Visualizar no Behance</a>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"/>
+                        <path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"/>
+                      </svg>               
+                    </button>              
+                  </div>                   
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-dark">
                   <img src="images/Last.fm Cover.png" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title" data-translate="lastfm_title">Last.fm: Redesign de App Mobile</h5>
@@ -465,22 +492,8 @@
                     </button>              
                   </div>                   
                 </div>
-
-                  <div class="card mx-2">
-                    <img src="images/Capa_Pina.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title" data-translate="pina_title">App Pinacoteca São Paulo</h5>
-                      <p class="card-text" data-translate="pina_about">Projeto de aplicativo para o famoso museu de São Paulo</p>
-                      <br>
-                      <button class="btn btn-dark my-2">
-                        <a style="color: white;text-decoration: none;" href="https://www.behance.net/gallery/200180661/App-Pinacoteca-Sao-Paulo" data-translate="btn_viewbehance">Visualizar no Behance</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"/>
-                          <path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"/>
-                        </svg>               
-                      </button>              
-                    </div>                   
-                  </div>                                  
+              </div>    
+                                                    
                 <!--<div class="card mx-3 px-2">                                             
                   <img src="..." class="card-img-top" alt="...">                             
                   <div class="card-body">                                                    
@@ -490,7 +503,7 @@
                   </div>                                                                     
                 </div>-->                                                                    
             </div>                                                                           
-            <div class="container col-sm-8 text-center">                                     
+            <div class="container col-sm-8 my-3 text-center">                                     
                 <a class="icon-link navigators" href="#projetos" data-translate="home_viewprojects">
                     Ver todos os projetos                                                    
                   </a>                                                                       
@@ -519,8 +532,10 @@
                   </div>                            
                 </div>                              
                 <div class="card" style="border-radius: 0 0 8px 8px!important;">
-                  <div class="card-header" style="font-weight: 100;">
-                    #REDESIGN  #UI  #UX  #FIGMA     
+                  <div class="card-header" style="font-weight: 70;">
+                    <span class="badge text-bg-secondary px-2">Figma</span>
+                    <span class="badge text-bg-secondary px-2">UX Research</span>
+                    <span class="badge text-bg-secondary px-2">UI Design</span>     
                   </div>                            
                   <div class="card-body">           
                     <h5 class="card-title" data-translate="lastfm_title">Last.fm - Redesign App Mobile</h5>
@@ -547,7 +562,9 @@
                 </div>
                 <div class="card" style="border-radius: 0 0 8px 8px!important;">
                   <div class="card-header">
-                    #UX #UI #FIGMA
+                    <span class="badge text-bg-secondary px-2">Figma</span>
+                    <span class="badge text-bg-secondary px-2">UX</span>
+                    <span class="badge text-bg-secondary px-2">UI Design</span>     
                   </div>
                   <div class="card-body">
                     <h5 class="card-title" data-translate="pina_title">App Pinacoteca São Paulo</h5>
@@ -572,7 +589,9 @@
                 </div>
                 <div class="card" style="border-radius: 0 0 8px 8px!important;">
                   <div class="card-header">
-                    #BOOTSTRAP #JS #JQUERY
+                    <span class="badge text-bg-secondary px-2">Bootstrap</span>
+                    <span class="badge text-bg-secondary px-2">JavaScript</span>
+                    <span class="badge text-bg-secondary px-2">JQuery</span>  
                   </div>
                   <div class="card-body">
                     <h5 class="card-title" data-translate="portfolio_title">Portfolio (Este Site)</h5>
@@ -607,7 +626,7 @@
           <div id="aboutBanner" class="container-fluid px-4 py-5">
               <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="container-fluid text-center">
-                  <img src="images/me.jpg" class="mx-lg-auto px-4 my-3 img-fluid center" alt="Bootstrap Themes" width="300px" style="border-radius: 50%;" loading="lazy">
+                  <img src="images/me.png" class="mx-lg-auto px-4 my-3 img-fluid center" alt="Bootstrap Themes" width="300px" loading="lazy">
                 </div>
                 <div class="container px-5 text-center">
                   <!--<h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Feldaput!!</h1>-->
@@ -617,20 +636,30 @@
                   </div>
                   <br>
                   <br>
-                  <p class="text-start fs-5" data-translate="ts_aboutme">Como UX designer meu objetivo é criar experiências acessíveis e bem definidas, desde o processo de ideação. Em minha experiência como Freelance, tenho a opotunidade de trbalhar próximo ao desenvolvimento, podendo assim otimizar e agilizar meu processo de Design. </p>
-                  <div class="container-fluid text-center">
-                    <a class="icon-link fs-5 py-3" href="Bruno Santos CV.docx" target="_blank" data-translate="viewCV">Visualizar Currículo</a>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0d6efd" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"/>
-                        <path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"/>
-                      </svg>
+                  <p class="text-start fs-5 mb-3" data-translate="ts_aboutme">Como UX designer meu objetivo é criar experiências acessíveis e bem definidas, desde o processo de ideação. Em minha experiência como Freelance, tenho a opotunidade de trbalhar próximo ao desenvolvimento, podendo assim otimizar e agilizar meu processo de Design. </p>
+                  
+                  <div class="py-3">
+                    <h4 data-translate="baixaCV">
+                      Baixe meu Currículo
+                    </h4>
                   </div>
-                  <div class="containet-fluid text-center">
-                    <a class="icon-link fs-5 py-3" href="Bruno Santos CV (English).docx" target="_blank" data-translate="viewCVENG">Visualizar Currículo em Inglês</a>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0d6efd" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"/>
-                        <path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"/>
-                      </svg>
+                  <div class="btn-group px-2">
+                    <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      .DOCX
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" data-translate="cvPortugues" href="Bruno Santos CV pt-BR.docx">Português</a></li>
+                      <li><a class="dropdown-item" data-translate="cvIngles" href="Bruno Santos CV en.docx">Inglês</a></li>
+                    </ul>
+                  </div>
+                  <div class="btn-group px-2">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      .PDF
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" data-translate="cvPortugues" href="Bruno Santos CV pt-BR.pdf">Português</a></li>
+                      <li><a class="dropdown-item" data-translate="cvIngles" href="Bruno Santos CV en.pdf">Inglês</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -646,7 +675,7 @@
     <div class="container-fluid px-3" id="meinfooter">
       <footer class="container-fluid px-3">
           <p class="float-end"><a href="#" data-translate="backtotop">Voltar ao Topo</a></p>
-          <p class="float-start">&copy; 2023 &middot; <a href="https://www.behance.net/bdasilvasauro" target="_blank"><i class="fa-brands fa-square-behance fa-2xl huve" style="color: #666666;"></i></a> &middot; <a href="https://www.linkedin.com/in/bdasilvasauro/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl huve" style="color: #666666;"></i></a></p>
+          <p class="float-start">&copy; 2024 &middot; <a href="https://www.behance.net/bdasilvasauro" target="_blank"><i class="fa-brands fa-behance fa-2 huve" style="color: #666666;"></i></a> &middot; <a href="https://www.linkedin.com/in/bdasilvasauro/" target="_blank"><i class="fa fa-linkedin fa-2 huve" style="color: #666666;"></i></a></p>
           <br>
       </footer>
     </div>
