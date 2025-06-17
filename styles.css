@@ -1,5 +1,5 @@
 *{
-    font-family: "Share Tech", sans-serif;
+    font-family: "Arial Nova", sans-serif;
 }
 
 .navbar-toggler{
@@ -147,4 +147,8 @@ transform: rotateZ(0);
   cursor: pointer;
   color: rgb(203, 0, 54)!important;
   font-weight: 400;
+}
+
+.smoothtext{
+  color:dimgray;
 }
