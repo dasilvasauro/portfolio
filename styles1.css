@@ -1,0 +1,140 @@
+p{
+    font-family: "Noto Sans", sans-serif;
+    text-shadow: #474d4e 0px 0px 20px;
+}
+
+.header-title{
+    font-family: "Doto", sans-serif;
+    text-shadow: #474d4e 0px 0px 20px;
+}
+
+#mini-about {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    text-shadow: #21292b88 0px 3px 12px;
+    margin-top: 16px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at 60% 40%, #f8f9fa 0%, #b3c0c4 40%, #f1f3f4 70%, #dee2e6 90%, #f8f9fa 100%);
+    background-size: 200% 200%;
+    animation: gradientBG 18s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 60% 40%;
+    }
+    50% {
+        background-position: 40% 60%;
+    }
+    100% {
+        background-position: 60% 40%;
+    }
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    height: 64px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    border-radius: 18px;
+    margin: 12px auto 0 auto;
+    width: calc(100% - 24px);
+    z-index: 100;
+}
+
+.navbar-icons {
+    display: flex;
+    gap: 32px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center; /* Added */
+    height: 100%;        /* Optional: ensures full navbar height */
+}
+
+.navbar-profile {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    align-items: center;
+    height: 100%;
+    margin-right: 0.5cm; /* Move icon 0.5cm to the left from the right edge */
+}
+
+.hero_image{
+    width:500; 
+    height:350;
+}
+
+.icon {
+    font-size: 2rem;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.header {
+    padding-top: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding-top: 26px;
+        align-items: center;
+    }
+    .navbar {
+        padding: 0 12px;
+        height: 48px;
+        justify-content: flex-start;
+    }
+    .navbar-icons {
+        gap: 16px;
+        margin: 0;
+        position: static;
+        left: auto;
+        transform: none;
+        align-items: center; /* Added */
+        height: 100%;        /* Optional */
+    }
+    .icon {
+        font-size: 1.3rem;
+    }
+    .navbar-profile {
+        padding-left: 16px;
+        display: flex;         /* Added */
+        align-items: center;   /* Added */
+        height: 100%;          /* Optional */
+    }
+
+    .hero_image{
+        width:100%;
+        height: 100%;
+    }
+}
