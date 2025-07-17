@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="styles1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,27 +15,40 @@
 <body>
     <nav class="navbar">
         <div class="navbar-icons">
-            <a href="#"><img src="images/placeholder.svg" alt="Icon" class="icon" width="24" height="24"></a>
-            <a href="#"><img src="images/placeholder.svg" alt="Icon" class="icon" width="24" height="24"></a>
-            <a href="#"><img src="images/placeholder.svg" alt="Icon" class="icon" width="24" height="24"></a>
-            <a href="#"><img src="images/placeholder.svg" alt="Icon" class="icon" width="24" height="24"></a>
+            <a href="#"><img class="navicon" src="images/home.svg" alt="Icon" class="icon" width="36" height="36"></a>
+            <a href="#"><img class="navicon" src="images/projects.svg" alt="Icon" class="icon" width="36" height="32"></a>
+            <a href="#"><img class="navicon" src="images/aboutme.svg" alt="Icon" class="icon" width="28" height="36"></a>
+            <a href="#"><img class="navicon" src="images/contact.svg" alt="Icon" class="icon" width="36" height="36"></a>
         </div>
-        <a href="#" class="navbar-profile"><img src="images/placeholder.svg" alt="Icon" class="icon" width="24" height="24"></a>
+            <a href="#" class="navbar-profile"><p id="lang-switch">⇄ pt-BR</p></a>
+        
     </nav>
 
+    <!--- 🚥 Seção: Hero (Principal) --->
     <section id="hero">
         <div class="container">
             <header class="header">
-                <h1 class="header-title">WELCOME TO MY PORTFOLIO</h1>
+                <h1 class="header-title">BEM VINDO AO MEU PORTFOLIO</h1>
+                <p id="cromb">Em Construção ⚠️</p>
                 <div class="hero-image-container">
-                    <img class="hero_image" src=images\meu_motion.gif alt="Hero Image" width="500" height="350">
+                    <img class="hero_image" src=images\Hero-small-gs.gif alt="Hero Image" width="500" height="350">
                 </div>
                 <p id="mini-about">Sou um profissional de TI com anos de experiência resolvendo problemas de forma criativa, otimizando processos com base em dados.</p>
+                <a href="">Me conheça melhor ↗</a>
             </header>
         </div>
-        
     </section>
-
+    <!--- 🏁 Seção: Hero (Principal) --->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <a class="footer_link" href="https://github.com/" target="_blank" aria-label="GitHub">Github</a>
+                <a class="footer_link" href="https://github.com/" target="_blank" aria-label="GitHub">LinkedIn</a>
+                <a class="footer_link" href="https://github.com/" target="_blank" aria-label="GitHub">Behance</a>
+            </div>
+            <p class="footer-text">&copy; 2025 Bruno Santos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
