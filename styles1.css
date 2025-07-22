@@ -217,7 +217,6 @@ p{
     .navbar {
         padding: 0 2px;
         height: 48px;
-        justify-content: flex-start;
     }
     .navbar-icons {
         gap: 16px;
