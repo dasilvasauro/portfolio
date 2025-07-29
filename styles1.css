@@ -4,7 +4,7 @@ body{
     background-size: 200% 200%;
     animation: gradientBG 18s ease infinite;
     margin: 0; 
-    padding: 0;
+    /*padding: 20px;*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -51,6 +51,7 @@ body{
 section{
     opacity: 0;
     display: none;
+    filter: grayscale(2);
 }
 
 section.active{
@@ -111,8 +112,6 @@ p{
     text-align: center;
     text-shadow: #21292b88 0px 3px 12px;
     margin-top: 16px;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 
@@ -121,7 +120,7 @@ p{
     /** Animation: navbar smooth reveal **/
     opacity: 0;
     transform: scale(0.96);
-    filter: grayscale(1);
+    filter: grayscale(2);
     animation: zoomInBody_nav 1.9s cubic-bezier(0.36, 1, 0.42, 1) forwards;
     /****/
 
@@ -295,4 +294,181 @@ p{
     100% {
         background-position: 60% 40%;
     }
+}
+
+.card {
+  background: white;
+  border-radius: 40px;
+  border-style: solid;
+  border-color: #b9b9b9;
+  border-width: 0.1cap;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 900px;
+  margin-right: auto;
+  margin: auto; /* <-- This is the key fix */
+  box-sizing: border-box;
+
+  transition: transform 0.3s ease 0.7s, box-shadow 0.3s ease 0.1s; /* 1s delay */
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Image block */
+.card-image {
+  padding: 10px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: block;
+}
+
+/* Card content */
+.card-content {
+  padding: 0 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-title {
+  color: #202020;
+  font-weight: light;
+  font-size: 1.2rem;
+  font-family: "Noto Sans", sans-serif;
+  margin: 10px 0 8px;
+}
+
+.tag {
+  background-color: #292929;
+  border-radius: 999px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+  padding: 8px 12px;
+  font-size: 1rem;
+  color: #dfdfdf;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 30px;
+  padding: 5px;
+}
+
+/* Button */
+.card-button {
+  background-color: #ddd;
+  border: none;
+  padding: 14px 50px;
+  font-size: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 32px;
+  }
+
+  .card-image,
+  .card-content {
+    flex: 1;
+  }
+
+  .card-content {
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 40px;
+  }
+
+  .card-title {
+    font-size: 2.2rem;
+  }
+
+  .card-button {
+    align-self: flex-start;
+  }
+
+  #mini-about {
+    font-size: 1.4rem;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: start;
+  }
+
+  .hero-image-container{
+    padding: 0;
+    align-items: center;
+  }
+
+  .hero_image {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+.card-wrapper {
+    padding: 20px;
+    perspective: 1000px;
+}
+
+/* On hover or touch, simulate pressing top-right */
+.card:active,
+.card-wrapper:active .card {
+  transform: rotateX(5deg) rotateY(-5deg) scale(0.98);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+.hero-content {
+  display: flex;
+  flex-direction: column; /* Mobile first: empilha */
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 20px;
+}
+
+.hero-image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+/* Para telas maiores (desktop) */
+@media screen and (min-width: 768px) {
+  .hero-content {
+    flex-direction: row; /* Lado a lado */
+    align-content: center;
+    align-items: center;
+    gap: 0rem;
+    
+  }
+
+  .hero-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+  }
 }

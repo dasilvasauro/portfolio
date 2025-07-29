@@ -61,6 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Show the target section
             targetSection.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
         });
     });
 });
