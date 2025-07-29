@@ -43,3 +43,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navbarLinks = document.querySelectorAll('.navbar-icons a');
+    const sections = document.querySelectorAll('section');
+
+    navbarLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+
+            // Hide all sections
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the target section
+            targetSection.classList.add('active');
+        });
+    });
+});

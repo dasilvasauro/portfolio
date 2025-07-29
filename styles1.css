@@ -50,6 +50,11 @@ body{
 
 section{
     opacity: 0;
+    display: none;
+}
+
+section.active{
+    display: block;
     transform: scale(0.96);
     filter: grayscale(1);
     animation: zoomInBody 1.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
@@ -191,6 +196,7 @@ p{
     padding: 8px;
     border-radius: 6px;
     transition: background 0.2s;
+    cursor: pointer;
 }
 
 .header {
