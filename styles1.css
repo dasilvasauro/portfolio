@@ -297,24 +297,25 @@ p{
 }
 
 .card {
-  background: white;
-  border-radius: 40px;
-  border-style: solid;
-  border-color: #b9b9b9;
-  border-width: 0.1cap;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  width: 100%;
-  max-width: 900px;
-  margin-right: auto;
-  margin: auto; /* <-- This is the key fix */
-  box-sizing: border-box;
-
-  transition: transform 0.3s ease 0.7s, box-shadow 0.3s ease 0.1s; /* 1s delay */
-  transform-style: preserve-3d;
-  will-change: transform;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #b9b9b9;
+    border-width: 0.1cap;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 900px;
+    margin-right: auto;
+    margin: auto; /* <-- This is the key fix */
+    box-sizing: border-box;
+    
+    transition: transform 0.3s ease 0.7s, box-shadow 0.3s ease 0.1s; /* 1s delay */
+    transform-style: preserve-3d;
+    will-change: transform;
 }
 
 /* Image block */
@@ -366,13 +367,20 @@ p{
 
 /* Button */
 .card-button {
-  background-color: #ddd;
-  border: none;
+  background-color: rgba(187.27, 192.32, 195.23, 0.2);
+  backdrop-filter: blur(12px);
   padding: 14px 50px;
   font-size: 1.2rem;
   border-radius: 16px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+
+.card-button:hover{
+    background-color: rgba(95.625, 150, 255, 0.2);
+    border-color: rgb(95.625, 150, 255);
+    color: navy;
+    transition: ease-in-out, 2s;
 }
 
 /* Desktop layout */
@@ -457,6 +465,7 @@ p{
     flex-direction: row; /* Lado a lado */
     align-content: center;
     align-items: center;
+    margin-right: 50px;
     gap: 0rem;
     
   }
