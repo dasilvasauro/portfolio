@@ -1,0 +1,40 @@
+/* reset.css */
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset body defaults */
+body {
+  line-height: 1;
+  font-family: sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* Remove list styles */
+ol, ul {
+  list-style: none;
+}
+
+/* Reset links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset images and media */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reset tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

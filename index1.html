@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -24,66 +30,59 @@
 
     <!--- 🚥 Seção: Hero (Principal) --->
     <section class="active" id="hero">
-    <div class="container">
-    <header class="header">
-      <h1 class="header-title">BEM VINDO AO MEU PORTFOLIO</h1>
-      
+      <div class="container">
+        <header class="header">
+          <h1 class="header-title">BEM VINDO AO MEU PORTFOLIO</h1>
+        </header>
+      </div>
       <div class="hero-content">
-        <div class="hero-image-container">
-          <img class="hero_image" src="images/Hero-small-gs.gif" alt="Hero Image" width="500" height="350">
-        </div>
-        
-        <div class="hero-text">
-          <p id="mini-about">Sou um profissional de TI com anos de experiência resolvendo problemas de forma criativa, otimizando processos com base em dados.</p>
-          <p>Análise de Sistemas</p>
-          <p>Desenvolvimento FrontEnd</p>
-          <p>Suporte</p>
-          <p>UX / UI Design</p>
-          <a href="">Me conheça melhor ↗</a>
+        <div class="typed-text">
+          <p class="typing-line" data-text="Olá, eu sou o Bruno!"></p>
+          <p class="typing-line" data-text="Trabalho com suporte de TI e infraestrutura, amo ajudar as pessoas!"></p>
+          <p class="typing-line" data-text="Me conheça melhor 👇🏽"></p>
+          <a href="#" class="typing-line link-line" data-text="Meu Portfólio"></a>
         </div>
       </div>
-    </header>
-  </div>
-</section>
+    </section>
     <!--- 🏁 Seção: Hero (Principal) --->
     
     <!--- 📂 Seção: Projetos --->
     <section id="projects">
-        <div class="container">
-            <header class="header">
-                <h1 class="header-title">PROJETOS</h1>
-            </header>
-        </div>
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="card-image">
-                  <img src="images/Last.fm Cover.png" alt="Card image" />
-                </div>
-                <div class="card-content">
-                  <h2 class="card-title">App Pinacoteca São Paulo</h2>
-                  <span class="tag" id="span-uxui">UX/UI</span>
-                  <p class="description">
-                    Projeto de aplicativo para o famoso museu de São Paulo.
-                  </p>
-                  <button class="card-button">Ver no Behance ↗</button>
-                </div>
-            </div>
-        </div>
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="card-image">
-                  <img src="images/Last.fm Cover.png" alt="Card image" />
-                </div>
-                <div class="card-content">
-                  <h2 class="card-title">Last.fm Mobile App Redesign</h2>
-                  <span class="tag" id="span-uxui">UX/UI</span>
-                  <p class="description">
-                    Minha concepção de uma versão ideal para um aplicativo esquecido de uma plataforma presente na cultura musical.
-                  </p>
-                  <button class="card-button">Ver no Behance ↗</button>
-                </div>
-            </div>
-        </div>
+      <div class="container">
+          <header class="header">
+              <h1 class="header-title">PROJETOS</h1>
+          </header>
+      </div>
+      <div class="card-wrapper">
+          <div class="card">
+              <div class="card-image">
+                <img src="images/pina_green.png" alt="Card image" />
+              </div>
+              <div class="card-content">
+                <h2 class="card-title">App Pinacoteca São Paulo</h2>
+                <span class="tag" id="span-uxui">UX/UI</span>
+                <p class="description">
+                  Projeto de aplicativo para o famoso museu de São Paulo.
+                </p>
+                <button class="card-button">Ver no Behance ↗</button>
+              </div>
+          </div>
+      </div>
+      <div class="card-wrapper">
+          <div class="card">
+              <div class="card-image">
+                <img src="images/lastfm_green.png" alt="Card image" />
+              </div>
+              <div class="card-content">
+                <h2 class="card-title">Last.fm Mobile App Redesign</h2>
+                <span class="tag" id="span-uxui">UX/UI</span>
+                <p class="description">
+                  Minha concepção de uma versão ideal para um aplicativo esquecido de uma plataforma presente na cultura musical.
+                </p>
+                <button class="card-button">Ver no Behance ↗</button>
+              </div>
+          </div>
+      </div>
         
     </section>
     <!--- 🏁 Seção: Projetos --->

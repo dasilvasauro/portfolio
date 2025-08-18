@@ -66,3 +66,86 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const lines = document.querySelectorAll('.typing-line');
+  const speeds = [40, 30, 35, 25]; // Characters per second
+  const lineDelays = [0, 1800, 4500, 7000]; // Start times in ms
+  let currentActiveLine = null;
+
+  // Initialize lines
+  lines.forEach((line, index) => {
+    const text = line.dataset.text;
+    line.textContent = '';
+    line.style.width = '0';
+    
+    // Mobile adaptation for the long line
+    if (window.innerWidth < 768 && index === 1) {
+      line.style.whiteSpace = 'normal';
+      line.style.height = '0';
+    }
+  });
+
+  // Animate each line
+  lines.forEach((line, index) => {
+    setTimeout(() => {
+      // Remove active class from previous line
+      if (currentActiveLine) {
+        currentActiveLine.classList.remove('active');
+      }
+      
+      // Set current active line
+      currentActiveLine = line;
+      line.classList.add('active');
+      
+      const text = line.dataset.text;
+      const duration = (text.length / speeds[index]) * 1000;
+      
+      // Desktop animation
+      if (window.innerWidth >= 768 || index !== 1) {
+        line.style.transition = `width ${duration}ms steps(${text.length}, end)`;
+        line.style.width = `${text.length}ch`;
+        line.textContent = text;
+      }
+      // Mobile special handling for long line
+      else {
+        line.style.transition = `
+          width ${duration}ms ease,
+          height ${duration}ms ease,
+          opacity 300ms ease
+        `;
+        line.style.width = '100%';
+        line.style.height = 'auto';
+        line.textContent = text;
+      }
+      
+      // Remove cursor after animation completes
+      setTimeout(() => {
+        document.querySelectorAll('.typing-line').forEach(l => {
+        l.classList.remove('active');
+        l.style.animation = 'none';   
+        });
+
+        currentActiveLine = line;
+        line.classList.add('active');
+
+        line.classList.remove('active');
+      }, duration);
+      
+    }, lineDelays[index]);
+    
+    setTimeout(() => {
+      // Show cursor after line animation
+      document.querySelectorAll('.typing-line').forEach(l => {
+        l.classList.remove('active');
+        l.style.animation = 'none';
+      });
+    }, lineDelays[lineDelays.length - 1] + 2000);
+
+});
+});
