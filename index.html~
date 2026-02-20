@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Retro-Moderno</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="boot-screen">
+        <div id="boot-text"></div>
+    </div>
+
+    <main id="app">
+        
+        <section id="home" class="page active">
+            <div class="content-wrapper">
+                <h1>Olá, eu sou o [Seu Nome]!</h1>
+                <p>Desenvolvedor focado em criar experiências minimalistas, eficientes e de alto impacto.</p>
+                
+                <div class="action-buttons">
+                    <button class="btn retro-btn">Meus Projetos</button>
+                    
+                    <div class="dropdown">
+                        <button class="btn retro-btn" id="cv-btn">Baixar CV <i class="fa-solid fa-caret-down"></i></button>
+                        <div class="dropdown-content" id="cv-dropdown">
+                            <a href="#">Português (PT-BR)</a>
+                            <a href="#">Inglês (EN)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="page">
+            <div class="content-wrapper">
+                <h2>Experiências</h2>
+                <div class="grid-container">
+                    <div class="card square-card exp-card">
+                        <img src="https://via.placeholder.com/50/00D3FA/293133?text=Logo" alt="Logo Empresa" class="company-logo">
+                        <h3>Empresa X</h3>
+                        <p>Desenvolvedor Front-end</p>
+                        <ul>
+                            <li>Criação de interfaces responsivas.</li>
+                            <li>Otimização de performance web.</li>
+                            <li>Integração com APIs RESTful.</li>
+                            <li>Mentoria de devs juniores.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>Competências</h2>
+                <div class="skills-container">
+                    <span class="skill">HTML5</span>
+                    <span class="skill">CSS3</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">React</span>
+                    <span class="skill">Git</span>
+                    <span class="skill">UI/UX</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="page">
+            <div class="content-wrapper">
+                <h2>Meus Projetos</h2>
+                <div class="grid-container">
+                    
+                    <div class="card square-card proj-card">
+                        <img src="https://via.placeholder.com/300x150/3B8794/ffffff?text=Capa+Projeto+1" alt="Projeto 1">
+                        <h3>Sistema de Gestão</h3>
+                        <p>Plataforma para gestão de estoque focada em pequenos lojistas.</p>
+                        <div class="tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">React</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="card square-card proj-card">
+                        <img src="https://via.placeholder.com/300x150/3B8794/ffffff?text=Capa+Projeto+2" alt="Projeto 2">
+                        <h3>App de Clima</h3>
+                        <p>Aplicação que consome API meteorológica para mostrar o clima retro.</p>
+                        <div class="tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">API</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="card square-card proj-card">
+                        <img src="https://via.placeholder.com/300x150/3B8794/ffffff?text=Capa+Projeto+3" alt="Projeto 3">
+                        <h3>Blog Minimalista</h3>
+                        <p>Gerador de site estático rápido e focado em leitura imersiva.</p>
+                        <div class="tags">
+                            <span class="tag">Eleventy</span>
+                            <span class="tag">Markdown</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="page">
+            <div class="content-wrapper">
+                <h2>Vamos Conversar?</h2>
+                <div class="grid-container">
+                    <a href="#" class="card square-card contact-card">
+                        <i class="fa-brands fa-whatsapp contact-icon"></i>
+                        <h3>WhatsApp</h3>
+                    </a>
+                    <a href="#" class="card square-card contact-card">
+                        <i class="fa-brands fa-linkedin contact-icon"></i>
+                        <h3>LinkedIn</h3>
+                    </a>
+                    <a href="#" class="card square-card contact-card">
+                        <i class="fa-solid fa-envelope contact-icon"></i>
+                        <h3>E-mail</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <nav id="taskbar">
+        <button class="nav-btn active" data-target="home">
+            <i class="fa-solid fa-house"></i>
+            <span class="nav-text">Início</span>
+        </button>
+        <button class="nav-btn" data-target="sobre">
+            <i class="fa-solid fa-user-terminal"></i>
+            <span class="nav-text">Sobre</span>
+        </button>
+        <button class="nav-btn" data-target="projetos">
+            <i class="fa-solid fa-folder-open"></i>
+            <span class="nav-text">Projetos</span>
+        </button>
+        <button class="nav-btn" data-target="contato">
+            <i class="fa-solid fa-satellite-dish"></i>
+            <span class="nav-text">Contato</span>
+        </button>
+    </nav>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

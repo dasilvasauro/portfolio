@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Santos da Mata</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div id="boot-screen">
+        <div id="boot-text"></div>
+    </div>
+
+    <div id="project-overlay" style="display: none;"> <div class="overlay-content">
+            <pre id="ascii-question">
+  ?????  
+ ??   ?? 
+      ?? 
+     ??  
+     ??  
+         
+     ??  
+            </pre>
+            <div class="warning-text">
+                <h2>VOCÊ ESTÁ ABRINDO UMA NOVA ABA</h2>
+                <p>Você está prestes a abrir esse projeto em uma nova aba</p>
+                <p>Deseja prosseguir para o link externo?</p>
+            </div>
+            <div class="overlay-actions">
+                <button id="btn-cancel" class="btn retro-btn overlay-btn">VOLTAR</button>
+                <button id="btn-proceed" class="btn retro-btn overlay-btn confirm">PROSSEGUIR</button>
+            </div>
+        </div>
+    </div>
+
+    <main id="app">
+        
+        <section id="home" class="page active">
+            <div class="content-wrapper">
+                <h1>Olá, sou o Bruno</h1>
+                <p>Sou um analista de suporte generalista, que se dedica a traduzir complexidades, refletir sobre a experiência do usuário e transformar a dúvida em entendimento.</p>
+                
+                <div class="action-buttons">
+                    <button class="btn retro-btn go-to-section" data-target="sobre">Me conheça melhor</button>
+                    
+                    <div class="dropdown">
+                        <button class="btn retro-btn" id="cv-btn">Baixar CV <i class="fa-solid fa-caret-down"></i></button>
+                        <div class="dropdown-content" id="cv-dropdown">
+                            <a href="docs/Bruno Santos CV (pt-BR).docx.pdf" target="_blank">Português (PT-BR)</a>
+                            <a href="docs/Bruno Santos CV (en-US).docx.pdf" target="_blank">Inglês (EN)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="page">
+            <div class="content-wrapper">
+
+                <h2><i class="fa-solid fa-terminal"></i> Sobre Mim</h2>
+                <div class="about-text" style="margin-bottom: 2.5rem; line-height: 1.6;">
+                    <p>Paulista, residente em Guarulhos. Trabalho com suporte há quase, iniciando na minha experiência como Assistente de Sistemas no Hotel Pullman. Foi nessa experiência que descobri que gosto muito de ajudar pessoas com produtos e também com hardware. Com experiência em desenvolvimento e infraestrutura, acabo sendo um analista de suporte generalizado. Um campo que aprecio demais também é o de UX Design.</p>
+                    <br>
+                    <p>Na minha trajetória documentei processos, criei aplicações e coloquei a mão na massa realizando testes exploratórios em praticamente qualquer software com qual interagi. Ainda faço tudo isso, e agora também tenho contato com mercados globais participando de reuniões com clientes da américa látina e europa, em inglês e espanhol.</p>
+                </div>
+
+                <h2>Experiências</h2>
+                <div class="grid-container">
+                    <div class="card square-card exp-card">
+                        <img src="images/logos/igs_bit.png" alt="Logo Empresa" class="company-logo">
+                        <h3>IGS - International Global Solutions</h3>
+                        <p>Analista de Suporte Jr.</p>
+                        <p>out. 2025 - <b>atualmente</b></p>
+                        <ul>
+                            <li>Atendimento N2 e N3 de demandas do mercado global, via Zendesk</li>
+                            <li>Manutenção de serviços via terminal Linux, utilizando SSH</li>
+                            <li>Escrita técnica e documentação de artigos via Confluence</li>
+                            <li>Testes Exploratórios em Jogos</li>
+                        </ul>
+                    </div>
+                    <div class="card square-card exp-card">
+                        <img src="images/logos/pullman_bit.png" alt="Logo Empresa" class="company-logo">
+                        <h3>Hotel Pullman São Paulo GRU Airport</h3>
+                        <p>Assistente de Sistemas</p>
+                        <p>mai. 2022 - set. 2025</p>
+                        <ul>
+                            <li>Criação de um portal de suporte utilizando Sharepoint.</li>
+                            <li>Suporte à ambiente de alta disponibilidade</li>
+                            <li>Desenvolvimento de aplicação de Gerenciamento de Ativos</li>
+                            <li>Prestação de Suporte em inglês para clientes de alto padrão</li>
+                        </ul>
+                    </div>
+                    <div class="card square-card exp-card">
+                        <img src="images/logos/signa_bit.png" alt="Logo Empresa" class="company-logo">
+                        <h3>Signa Consultoria e Sistemas</h3>
+                        <p>Programador Jr. Fullstack</p>
+                        <p>nov. 2020 - fev. 2022</p>
+                        <ul>
+                            <li>Desenvolvimento em C#, ASP Classic</li>
+                            <li>Tradução de páginas utilizando jquery</li>
+                            <li>Criação de páginas com framework Angular</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="languages-container" style="margin-bottom: 2.5rem;">
+                    <h2><i class="fa-solid fa-language"></i> Idiomas</h2>
+                    <ul style="list-style-type: none; margin-left: 0;">
+                        <li style="margin-bottom: 0.5rem;">
+                            <img src="https://flagcdn.com/gb.svg" class="inline-flag" alt="Bandeira Reino Unido">
+                            Inglês - Avançado / Fluente
+                        </li>
+                        <li>
+                            <img src="https://flagcdn.com/mx.svg" class="inline-flag" alt="Bandeira México">
+                            Espanhol - Básico / Intermediário
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Competências</h2>
+                <div class="skills-container">
+                    <span class="skill">HTML5</span>
+                    <span class="skill">CSS3</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Linux</span>
+                    <span class="skill">Zendesk</span>
+                    <span class="skill">UI/UX</span>
+                    <span class="skill">Kanban</span>
+                    <span class="skill">Jira</span>
+                    <span class="skill">Shell Scripting</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">Testes Exploratórios</span>
+                    <span class="skill">Escrita Técnica</span>
+                    <span class="skill">IAs</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="page">
+            <div class="content-wrapper">
+                <h2>Meus Projetos</h2>
+                <div class="grid-container">
+                    
+                    <div class="card square-card proj-card">
+                        <img src="images/projects/teratecnica.jpg" alt="Projeto 1">
+                        <h3>Site Teratecnica</h3>
+                        <p>Landing page criada para um prestador de serviços em tecnologia e infra-estrtura</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <button class="btn retro-btn project-link-btn" data-href="https://dasilvasauro.github.io/teratecnica" style="margin-top: 1rem; width: 100%;">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Visitar Página
+                        </button>
+                    </div>
+
+                    <div class="card square-card proj-card">
+                        <img src="images/projects/pinacoteca.jpg" alt="Projeto 2">
+                        <h3>App Pinacoteca</h3>
+                        <p>Conceito e design para aplicativo do famoso museu paulista. Desenvolvido durante o curso <i>Google UX Design Professional Certificate</i></p>
+                        <div class="tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">User Research</span>
+                            <span class="tag">UI Design</span>
+                        </div>
+                        <button class="btn retro-btn project-link-btn" data-href="https://www.behance.net/gallery/200180661/App-Pinacoteca-Sao-Paulo" style="margin-top: 1rem; width: 100%;">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Projeto
+                        </button>
+                    </div>
+
+                    <div class="card square-card proj-card">
+                        <img src="images/projects/inventario.jpg" alt="Projeto 3">
+                        <h3>Gerenciador de Ativos de TI</h3>
+                        <p>Aplicação para controle do Inventário de Ativos de TI. Criado durante minha passagem pelo <i>Hotel Pullman</i> para gerir os ativos do departamento de Sistemas</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQLite</span>
+                        </div>
+                        <button class="btn retro-btn project-link-btn" data-href="https://github.com/dasilvasauro/Inventario-TI" style="margin-top: 1rem; width: 100%;">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Projeto
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="page">
+            <div class="content-wrapper">
+                <h2>Vamos Conversar?</h2>
+                <div class="grid-container">
+                    <a href="https://wa.me/5511947677668" class="card square-card contact-card">
+                        <i class="fa-brands fa-whatsapp contact-icon"></i>
+                        <h3>WhatsApp</h3>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bdasilvasauro/" class="card square-card contact-card">
+                        <i class="fa-brands fa-linkedin contact-icon"></i>
+                        <h3>LinkedIn</h3>
+                    </a>
+                    <a href="mailto:bruno.santos.slm@outlook.com" class="card square-card contact-card">
+                        <i class="fa-solid fa-envelope contact-icon"></i>
+                        <h3>E-mail</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <nav id="taskbar">
+        <button class="nav-btn active" data-target="home">
+            <i class="fa-solid fa-house"></i>
+            <span class="nav-text">Início</span>
+        </button>
+        <button class="nav-btn" data-target="sobre">
+            <i class="fa-solid fa-user"></i>
+            <span class="nav-text">Sobre</span>
+        </button>
+        <button class="nav-btn" data-target="projetos">
+            <i class="fa-solid fa-folder-open"></i>
+            <span class="nav-text">Projetos</span>
+        </button>
+        <button class="nav-btn" data-target="contato">
+            <i class="fa-solid fa-satellite-dish"></i>
+            <span class="nav-text">Contato</span>
+        </button>
+    </nav>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

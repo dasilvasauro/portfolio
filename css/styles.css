@@ -1,0 +1,335 @@
+/* =========================================
+   VARIÁVEIS DE COR E ESTILO
+   ========================================= */
+:root {
+    --color-bg: #000000;    /* Fundo Preto */
+    --color-base: #FFFFFF;  /* Detalhes, bordas e títulos Brancos */
+    --color-sec: #666666;   /* Cinza para hover e textos secundários */
+    --color-text: #FFFFFF;  /* Texto Branco */
+    
+    --font-main: 'VT323', monospace;
+    --border-flat: 2px solid var(--color-base);
+    --taskbar-height: 60px;
+}
+
+/* =========================================
+   RESET E BASE (Mobile-First)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    overflow: hidden; /* Oculta a rolagem global, rolamos apenas as sections */
+    font-size: 1.2rem;
+}
+
+h1, h2, h3 { color: var(--color-base); }
+h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; text-transform: uppercase; border-bottom: var(--border-flat); display: inline-block; }
+
+ul { margin-left: 1.5rem; }
+
+/* =========================================
+   ANIMAÇÃO DE BOOT (Terminal)
+   ========================================= */
+#boot-screen {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background-color: #000;
+    color: #FFFFFF; /* Muda a letra do boot para branco */
+    white-space: pre-wrap; /* Garante que a arte ASCII respeite os espaços */
+    z-index: 9999;
+    padding: 20px;
+    font-size: 1.2rem;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom Scrollbar Retrô */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-bg); border-left: var(--border-flat); }
+::-webkit-scrollbar-thumb { background: var(--color-base); }
+
+/* =========================================
+   SISTEMA DE PÁGINAS (SPA)
+   ========================================= */
+#app {
+    height: calc(100vh - var(--taskbar-height)); /* Espaço pro Navbar */
+    position: relative;
+    overflow-y: auto;
+}
+
+.page {
+    display: none; /* Esconde por padrão */
+    padding: 2rem 1rem;
+    min-height: 100%;
+}
+
+.page.active {
+    display: block; /* Mostra a ativa */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.content-wrapper { max-width: 1000px; margin: 0 auto; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   BOTÕES E ELEMENTOS INTERATIVOS
+   ========================================= */
+.btn {
+    background-color: transparent;
+    color: var(--color-text);
+    border: var(--border-flat);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover, .btn:active {
+    background-color: var(--color-base);
+    color: var(--color-bg);
+}
+
+.action-buttons {
+    display: flex; gap: 1rem; margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Dropdown */
+.dropdown { position: relative; display: inline-block; }
+.dropdown-content {
+    display: none; position: absolute;
+    background-color: var(--color-bg);
+    min-width: 160px;
+    border: var(--border-flat);
+    border-top: none;
+    z-index: 10;
+}
+.dropdown-content.show { display: block; }
+.dropdown-content a {
+    color: var(--color-text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: var(--color-sec);
+}
+
+/* =========================================
+   CARDS (Layout Totalmente Quadrado)
+   ========================================= */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    border: var(--border-flat);
+    background-color: var(--color-bg);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* Força o elemento a ser um quadrado perfeito */
+    aspect-ratio: 1 / 1; 
+    overflow-y: auto; /* Evita que o conteúdo quebre o quadrado no mobile */
+}
+
+/* Card: Sobre Mim (Experiências) */
+.exp-card .company-logo { width: 50px; height: 50px; margin-bottom: 1rem; object-fit: contain; }
+.exp-card h3 { margin-bottom: 0.2rem; }
+.exp-card p { color: var(--color-sec); margin-bottom: 1rem; border-bottom: 1px solid var(--color-sec); padding-bottom: 0.5rem;}
+.exp-card li { font-size: 1.1rem; margin-bottom: 0.3rem;}
+
+/* Card: Projetos */
+.proj-card img { width: 100%; height: 120px; object-fit: cover; border: var(--border-flat); margin-bottom: 1rem; }
+.proj-card p { flex-grow: 1; margin: 0.5rem 0;}
+.tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: auto;}
+.tag { border: 1px solid var(--color-sec); color: var(--color-base); padding: 0.2rem 0.5rem; font-size: 0.9rem; }
+
+/* Card: Contato */
+.contact-card { align-items: center; justify-content: center; text-decoration: none; transition: background 0.2s;}
+.contact-card:hover { background-color: var(--color-sec); }
+.contact-icon { font-size: 4rem; color: var(--color-base); margin-bottom: 1rem; }
+
+/* =========================================
+   COMPETÊNCIAS (Palavras Flutuantes)
+   ========================================= */
+.skills-container {
+    display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;
+}
+.skill {
+    color: var(--color-sec);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+/* A classe .enlarged será alternada pelo JS no mobile, o :hover resolve o desktop */
+.skill:hover, .skill.enlarged {
+    transform: scale(1.13);
+    color: var(--color-base);
+}
+
+/* =========================================
+   NAVBAR (Taskbar Estilo Windows)
+   ========================================= */
+#taskbar {
+    position: fixed;
+    bottom: 0; left: 0; width: 100%;
+    height: var(--taskbar-height);
+    background-color: var(--color-bg);
+    border-top: var(--border-flat);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-btn {
+    background: none; border: none;
+    color: var(--color-text);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    cursor: pointer;
+    width: 100%; height: 100%;
+    transition: background-color 0.2s;
+}
+.nav-btn.active { background-color: var(--color-sec); border-top: 3px solid var(--color-base); }
+.nav-btn:hover { background-color: rgba(56, 56, 56, 0.5); }
+.nav-btn i { font-size: 1.3rem; margin-bottom: 0.2rem; color: var(--color-base); }
+.nav-btn.active i { color: var(--color-text); }
+.nav-text { font-size: 1rem; }
+
+/* =========================================
+   OVERLAY DE PROJETOS (TELA AZUL RETRÔ)
+   ========================================= */
+
+/* Variável local para o azul clássico de DOS */
+:root {
+    --color-dos-blue: #0000AA;
+}
+
+#project-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Azul de fundo e texto branco/claro */
+    background-color: var(--color-dos-blue);
+    color: #FFFFFF;
+    z-index: 10000; /* Z-index altíssimo para ficar acima de tudo */
+    
+    /* Centralização total usando Flexbox */
+    display: flex; /* Será controlado pelo JS (flex/none) */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    
+    /* NENHUMA ANIMAÇÃO - Aparição instantânea */
+    transition: none !important;
+}
+
+.overlay-content {
+    max-width: 600px;
+    width: 100%;
+}
+
+#ascii-question {
+    font-family: monospace; /* Fonte monoespaçada é crucial para ASCII */
+    white-space: pre; /* Mantém os espaços exatos */
+    font-weight: bold;
+    color: #FFFF00; /* Amarelo clássico para destaque em fundo azul */
+    margin-bottom: 2rem;
+    
+    /* Truque de responsividade: 
+       O tamanho da fonte da arte ASCII diminui conforme a largura da tela diminui.
+       Em telas grandes é 3rem, em pequenas usa unidades de viewport (vw). */
+    font-size: clamp(0.5rem, 2.5vw, 2rem);
+    line-height: 1;
+}
+
+.warning-text h2 {
+    color: #FFFFFF; /* Título branco na tela azul */
+    background-color: var(--color-dos-blue); /* Garante que não pegue a cor da variável global */
+    border-bottom: none; /* Remove a borda padrão dos H2 */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.warning-text p {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.overlay-actions {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Estilo específico para botões nessa tela */
+.overlay-btn {
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-color: var(--color-dos-blue);
+}
+
+.overlay-btn:hover {
+    background-color: #FFFFFF;
+    color: var(--color-dos-blue);
+}
+
+/* Botão de confirmar com um destaque extra */
+.overlay-btn.confirm {
+    border-color: #FFFF00; /* Borda Amarela */
+    color: #FFFF00;
+}
+.overlay-btn.confirm:hover {
+    background-color: #FFFF00;
+    color: var(--color-dos-blue);
+}
+
+/* =========================================
+   BANDEIRAS INLINE (IDIOMAS)
+   ========================================= */
+.inline-flag {
+    height: 1em; /* A mágica: 1em é exatamente a altura da fonte da linha */
+    width: auto;
+    vertical-align: middle; /* Alinha o centro da imagem com o meio da letra */
+    margin-right: 0.5rem; /* Espaço entre a bandeira e o texto */
+    border: 1px solid var(--color-sec); /* Uma bordinha cinza sutil para destacar no fundo preto */
+    position: relative;
+    top: -0.1em; /* Pequeno ajuste fino para o alinhamento com a fonte VT323 */
+}
+
+/* =========================================
+   MEDIA QUERIES (Desktop)
+   ========================================= */
+@media (min-width: 768px) {
+    .page { padding: 4rem 2rem; }
+    h1 { font-size: 4rem; }
+    #taskbar { justify-content: flex-start; gap: 1rem; padding: 0 1rem; }
+    .nav-btn { flex-direction: row; gap: 0.5rem; width: auto; padding: 0 1.5rem; border: var(--border-flat); height: 80%; }
+    .nav-btn.active { border-top: var(--border-flat); background-color: var(--color-base); color: var(--color-bg); }
+    .nav-btn.active i, .nav-btn.active .nav-text { color: var(--color-bg); }
+}
